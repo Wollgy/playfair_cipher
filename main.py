@@ -70,17 +70,17 @@ def filterPlainText(text: str, language: str = "en") -> str:
     :return: filtered plain text
     """
     text = unidecode(text).upper()
-    text = text.replace(" ", "XSPACEX")\
-        .replace("0", "XZEROX")\
-        .replace("1", "XONEX")\
-        .replace("2", "XTWOX")\
-        .replace("3", "XTHREEX")\
-        .replace("4", "XFOURX")\
-        .replace("5", "XFIVEX")\
-        .replace("6", "XSIXX")\
-        .replace("7", "XSEVENX")\
-        .replace("8", "XEIGHTX")\
-        .replace("9", "XNINEX")
+    text = text.replace(" ", "YXSPACEX")\
+        .replace("0", "YXZEROX")\
+        .replace("1", "YXONEX")\
+        .replace("2", "YXTWOX")\
+        .replace("3", "YXTHREX")\
+        .replace("4", "YXFOURX")\
+        .replace("5", "YXFIVEX")\
+        .replace("6", "YXSIXYX")\
+        .replace("7", "YXSEVENX")\
+        .replace("8", "YXEIGHTX")\
+        .replace("9", "YXNINEX")
     text = "".join(char for char in text if char.isalpha())  # remove special characters
     text = replaceLanguageSpecificCharacters(text, language)
     return text
@@ -92,17 +92,17 @@ def convertStringRepresentationsBack(cipher_text: str) -> str:
     :param cipher_text: cipher text entering into decryption
     :return: original text with replaced string representations
     """
-    cipher_text = cipher_text.replace("XSPACEX", " ")\
-        .replace("XZEROX", "0")\
-        .replace("XONEX", "1")\
-        .replace("XTWOX", "2")\
-        .replace("XTHREEX", "3")\
-        .replace("XFOURX", "4")\
-        .replace("XFIVEX", "5")\
-        .replace("XSIXX", "6")\
-        .replace("XSEVENX", "7")\
-        .replace("XEIGHTX", "8")\
-        .replace("XNINEX", "9")
+    cipher_text = cipher_text.replace("YXSPACEX", " ")\
+        .replace("YXZEROX", "0")\
+        .replace("YXONEX", "1")\
+        .replace("YXTWOX", "2")\
+        .replace("YXTHREX", "3")\
+        .replace("YXFOURX", "4")\
+        .replace("YXFIVEX", "5")\
+        .replace("YXSIXYX", "6")\
+        .replace("YXSEVENX", "7")\
+        .replace("YXEIGHTX", "8")\
+        .replace("YXNINEX", "9")
     return cipher_text
 
 
